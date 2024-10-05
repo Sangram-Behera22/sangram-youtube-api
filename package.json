@@ -1,0 +1,27 @@
+{
+  "name": "sangram-blogs",
+  "version": "1.0.0",
+  "description": "this is a complete blog website made with node js and angualr",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start" : "node src/index.js"
+  },
+  "keywords": [
+    "blogs",
+    "articles"
+  ],
+  "author": "Sangram Behera",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "type": "module"
+}
