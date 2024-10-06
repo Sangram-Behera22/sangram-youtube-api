@@ -10,7 +10,7 @@ class ApiError extends Error{
         this.data = null // node js data assignment
         this.message = message
         this.success = false
-        this.errors = this.errors
+        this.errors = errors
         if(stack){
               this.stack = stack
         }else{
