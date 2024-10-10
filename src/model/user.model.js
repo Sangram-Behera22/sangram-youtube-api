@@ -28,7 +28,7 @@ const userSchema = new Schema(
       type: String, // cloudinary url
       required: true,
     },
-    coverImages: {
+    coverImage: {
       type: String, // cloudinary url
     },
     watchHistroy: [

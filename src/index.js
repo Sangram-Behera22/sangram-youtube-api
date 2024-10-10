@@ -1,8 +1,7 @@
 
 import app from "./app.js";
 import connectDB from "./db/index.js";
-import { configDotenv } from 'dotenv';
-configDotenv();
+import 'dotenv/config';
 const PORT = process.env.PORT;
 connectDB().then(()=>{
     app.on("error",(error)=>{
