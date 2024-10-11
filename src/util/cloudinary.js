@@ -1,5 +1,5 @@
 import {v2 as cloudinary} from 'cloudinary'
-import fs from 'fs'
+import {unlinkSync} from "node:fs"
 
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -17,10 +17,11 @@ const uploadOnCloudinary = async (localfilePath)=>{
         })
         // file has been uploaded successful
         console.log("file has been uploaded successful",response);
-        fs.unlinkSync(localfilePath) // remove the local upload file
+         const test = unlinkSync(localfilePath) // remove the local upload file
+         console.log(test)
         return response;
      } catch (error) {
-         fs.unlinkSync(localfilePath) // remove the local upload file 
+         unlinkSync(localfilePath) // remove the local upload file 
          return null
      }
 }
