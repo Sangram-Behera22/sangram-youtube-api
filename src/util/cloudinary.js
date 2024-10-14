@@ -35,4 +35,4 @@ const removeFromCloudinary = async (url)=>{
    }
 }
 
-export {uploadOnCloudinary}
+export {uploadOnCloudinary,removeFromCloudinary}
