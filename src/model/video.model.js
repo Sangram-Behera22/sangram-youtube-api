@@ -3,11 +3,11 @@ import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
 const videoSchema = new Schema(
   {
     videoFile: {
-      tyep: String, // cloudinary url
+      type: String, // cloudinary url
       required: true,
     },
     thumbnail: {
-      tyep: String, // cloudinary url
+      type: String, // cloudinary url
       required: true,
     },
     title: {

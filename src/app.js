@@ -19,8 +19,8 @@ app.use(cookieParser());   //handle cookies
 
 // route import
 import userRouter from './route/user.route.js'
-
+import videoRouter from './route/video.route.js'
 app.use("/api/v1/users",userRouter)
-
+app.use("/api/v1/videos", videoRouter)
 export default app;
 
