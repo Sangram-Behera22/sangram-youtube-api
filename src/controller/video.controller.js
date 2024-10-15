@@ -154,7 +154,8 @@ const deleteVideo = asyncHandler(async (req, res) => {
         throw new ApiError(400, "Invalid Id !!!");
     }
     await Video.findOneAndDelete(videoId)
-    await removeFromCloudinary(video.url);
+    await removeFromCloudinary(video.videoFile);
+    await removeFromCloudinary(video.thumbnail);
     return res
     .status(200)
     .json(new ApiResponse(200, {}, "Video deleted Successfully"))
