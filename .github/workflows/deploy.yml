@@ -7,20 +7,17 @@ jobs:
 
     steps:
       - name: "Setup Node.js"
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "22"
       
       - name: "Checkout Repository"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: "Install Dependencies"
         run: npm install
 
-      - name: "Install PM2"
-        run: npm install pm2 -g
       
       - name: "Deploy to Production"
         run: |
-          pm2 stop all
-          pm2 start src/index.js
+          pm2 restart src/index.js
